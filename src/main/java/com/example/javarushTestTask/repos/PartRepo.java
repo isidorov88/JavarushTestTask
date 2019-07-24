@@ -4,4 +4,6 @@ import com.example.javarushTestTask.domain.Part;
 import org.springframework.data.repository.CrudRepository;
 
 public interface PartRepo extends CrudRepository<Part, Integer> {
+
+    Part findByName(String name);
 }

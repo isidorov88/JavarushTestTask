@@ -2,6 +2,7 @@ package com.example.javarushTestTask.controller;
 
 import com.example.javarushTestTask.domain.Part;
 import com.example.javarushTestTask.repos.PartRepo;
+import com.example.javarushTestTask.service.PartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,9 @@ public class MainController {
 
     @Autowired
     PartRepo partRepo;
+
+    @Autowired
+    PartService partService;
 
     @GetMapping("/")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
@@ -35,14 +39,13 @@ public class MainController {
             ){
 
         Part part = new Part();
-        part.setName(name);
+        part.setName(name.trim());
         part.setNecessariness(isNecessary);
         part.setAmount(Integer.valueOf(amount));
 
         model.addAttribute("part", part);
 
-        partRepo.save(part);
-
+        partService.savePart(part);
 
         return "addingParts";
     }
