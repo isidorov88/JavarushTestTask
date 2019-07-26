@@ -23,8 +23,8 @@
                 <td align="left"><span>${part.name}</span></td>
                 <td align="center"><span>${part.necessary?then("Да", "Нет")}</span></td>
                 <td align="center"><span>${part.amount}</span></td>
-                <td><a class="btn btn-danger"  href="/delete/${part.id}"onclick="return confirm('Удалить строку?')">Delete</a></td>
-                <td><a class="btn btn-primary"  href="/update?id=${part.id}">Update</a></td>
+                <td><a class="btn btn-danger"  href="/delete/${part.id}"onclick="return confirm('Удалить строку?')">Удалить</a></td>
+                <td><a class="btn btn-primary"  href="/update?id=${part.id}">Изменить</a></td>
             </tr>
 
         <#else >

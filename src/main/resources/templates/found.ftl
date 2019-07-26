@@ -27,10 +27,11 @@
             </tbody>
         </table>
         <#else>
-        <div>Деталь не найдена<div>
+            <div class="alert alert-danger" role="alert"><h4 class="alert-heading">Деталь не найдена</h4><div>
+        <hr>
     </#if>
 
-    <div><a class="btn btn-primary m-1" href="/partsList">Список запчастей</a>
+    <div class="alert-heading"><a class="btn btn-primary m-1" href="/partsList">Список запчастей</a>
     <a class="btn btn-primary m-1" href="/add">Добавить запчасть</a></div>
 
 

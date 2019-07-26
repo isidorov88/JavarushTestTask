@@ -18,6 +18,6 @@
             Количество:
             <input class="form-control-sm m-1" type="number" name="amount" placeholder="Количество">
         </div>
-        <button class="btn btn-success m-1" type="submit">Save</button>
+        <button class="btn btn-success m-1" type="submit">Сохранить</button>
     </form>
 </#macro>
